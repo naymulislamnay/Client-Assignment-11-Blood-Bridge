@@ -20,3 +20,6 @@ export const saveOrUpdateUser = async userData => {
     )
     return data
 }
+
+// format text 
+export const formatText = (text) => text ? text.charAt(0).toUpperCase() + text.slice(1) : "";

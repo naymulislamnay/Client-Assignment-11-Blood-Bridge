@@ -4,6 +4,9 @@ import ErrorPage from "../components/ErrorPage";
 import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
+import Profile from "../pages/Profile";
+import PrivateRoute from "../privateRoute/PrivateRoute";
+import DonateNow from "../pages/DonateNow";
 
 const router = createBrowserRouter(
     [
@@ -27,6 +30,18 @@ const router = createBrowserRouter(
                 {
                     path: '/sign-up',
                     element: <SignUp></SignUp>
+                },
+                {
+                    path: '/donate-now',
+                    element: <DonateNow></DonateNow>
+                },
+                {
+                    path: '/profile',
+                    element: (
+                        <PrivateRoute>
+                            <Profile></Profile>
+                        </PrivateRoute>
+                    )
                 },
             ]
         }
