@@ -56,7 +56,7 @@ const Navbar = () => {
 
                             <button
                                 onClick={logOut}
-                                className="px-2 md:px-3 lg:px-4 py-1 md:py-2 h-fit rounded-lg bg-[#f05b5b] hover:bg-[#f14343] text-white font-semibold shadow text-[14px] md:text-[16px]"
+                                className="px-2 md:px-3 lg:px-4 py-1 md:py-2 h-fit rounded-lg bg-[#f05b5b] hover:bg-[#f14343] text-white font-semibold shadow text-[14px] md:text-[16px] hover:cursor-pointer"
                             >
                                 Log Out
                             </button>
@@ -67,13 +67,13 @@ const Navbar = () => {
                         <div className="flex items-center gap-2 md:gap-4">
                             <Link
                                 to="/log-in"
-                                className="px-2 md:px-3 lg:px-4 py-1 md:py-2 rounded-lg bg-[#f05b5b] hover:bg-[#f14343] text-white font-semibold shadow text-[14px] md:text-[16px]"
+                                className="px-2 md:px-3 lg:px-4 py-1 md:py-2 rounded-lg bg-[#f05b5b] hover:bg-[#f14343] text-white font-semibold shadow text-[14px] md:text-[16px] hover:cursor-pointer"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/sign-up"
-                                className="px-2 md:px-3 lg:px-4 py-1 md:py-2 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 shadow text-[14px] md:text-[16px]"
+                                className="px-2 md:px-3 lg:px-4 py-1 md:py-2 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 shadow text-[14px] md:text-[16px] hover:cursor-pointer"
                             >
                                 Register
                             </Link>

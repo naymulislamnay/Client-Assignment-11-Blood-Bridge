@@ -51,21 +51,17 @@ const SignUp = () => {
         setSigningUp(true);
 
         try {
-            // Use uploaded image or default image
             let imageURL = '/default-Profile.png';
             if (data.image && data.image.length > 0) {
                 imageURL = await imageUpload(data.image[0]);
             }
 
-            // Firebase signup & profile update
             await createUser(data.email, data.password);
             await updateUserProfile(data.name, imageURL);
 
-            // Find names from IDs
             const selectedDivision = divisions.find(d => d.id === data.division);
             const selectedDistrict = districts.find(d => d.id === data.district);
 
-            // Prepare MongoDB payload
             const userData = {
                 name: data.name,
                 email: data.email,
@@ -106,7 +102,7 @@ const SignUp = () => {
                     />
                     {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
 
-                    {/* Image (Optional) */}
+                    {/* Image */}
                     <input
                         type="file"
                         accept="image/*"
