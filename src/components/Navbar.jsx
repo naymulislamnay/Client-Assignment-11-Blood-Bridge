@@ -22,9 +22,6 @@ const Navbar = () => {
         <>
             <NavLink to="/" className={navLinkClass}>Home</NavLink>
             <NavLink to="/donate-now" className={navLinkClass}>Donate Now</NavLink>
-            {/* <NavLink to="/add-vehicle" className={navLinkClass}>Add Vehicle</NavLink>
-            <NavLink to="/my-vehicles" className={navLinkClass}>My Vehicles</NavLink>
-            <NavLink to="/my-bookings" className={navLinkClass}>My Bookings</NavLink> */}
         </>
     )
     return (
@@ -38,13 +35,6 @@ const Navbar = () => {
                 </div>
                 {user ? (
                     <>
-                        {/* <Link
-                          to='/dashboard'
-                          className='px-4 py-3 hover:bg-neutral-100 transition font-semibold'
-                        >
-                          Dashboard
-                        </Link> */}
-
                         <div className="group cursor-pointer flex items-center gap-1.5">
                             <Link to='/profile'>
                                 <img
